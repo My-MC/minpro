@@ -13,7 +13,7 @@ jobs:
         run: npm ci
       # build / ビルド
       - name: build
-        run: npm export
+        run: npm run export
       # deploy / デプロイ
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
