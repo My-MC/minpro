@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from "next/link"
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>minpro</title>
+        <title className={styles.title}>minpro</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -23,9 +23,14 @@ export default function Home() {
       </header>
         <div className={styles.container}>
           <div className={styles.grid}>
-            <div className={styles.card}>
-              <p></p>
-            </div>
+            <Link href="posts/about">
+              <div className={styles.card}>
+                <a>
+                  <p>第一回</p>
+                  <p>このサイトについて</p>
+                </a>
+              </div>
+            </Link>
           </div>
         </div>
       </mian>
@@ -35,10 +40,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Created by{' '}
-          <span className={styles.logo}>
-            <Image src="/icon.png" alt="Vercel Logo" width={16} height={16} />
-          </span>
+          Created by My-MC(My)
         </a>
       </footer>
     </div>
