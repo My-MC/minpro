@@ -10,10 +10,10 @@ jobs:
           node-version: '16'
       # install / インストール
       - name: install
-        run: npm ci
+        run: yarn install
       # build / ビルド
       - name: build
-        run: npm run export
+        run: yarn run export
       # deploy / デプロイ
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

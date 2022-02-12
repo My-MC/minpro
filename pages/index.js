@@ -23,7 +23,7 @@ export default function Home() {
       </header>
         <div className={styles.container}>
           <div className={styles.grid}>
-            <Link href="posts/about">
+            <Link href="posts/about" passHref>
               <div className={styles.card}>
                 <a>
                   <p>第一回</p>
