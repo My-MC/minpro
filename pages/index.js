@@ -6,8 +6,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title className={styles.title}>minpro</title>
-
+        <title>minpro</title>
       </Head>
 
       <mian className={styles.mian}>
@@ -34,15 +33,6 @@ export default function Home() {
           </div>
         </div>
       </mian>
-      <footer className={styles.footer}>
-        <a
-          href="https://github.com/My-MC"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by My-MC(My)
-        </a>
-      </footer>
     </div>
   )
 }
