@@ -18,7 +18,7 @@ export default function Home() {
           <h2 className={styles.description}>
             みんなのためのプログラミング
           </h2>
-      </div>
+        </div>
       </header>
         <div className={styles.container}>
           <div className={styles.grid}>
