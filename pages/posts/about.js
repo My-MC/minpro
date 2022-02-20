@@ -52,14 +52,13 @@ export default function About () {
                 </div>
                 <div className={styles.container}>
                     <div className={styles.grid}>
-                        <Link href="./../" passHref>
+                        <Link href="./../../" passHref>
                             <a>
                                 <div className={styles.card}>
                                     <p>HOME</p>
                                 </div>
                             </a>
                         </Link>
-
                     </div>
                 </div>
             </main>
