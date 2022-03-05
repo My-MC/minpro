@@ -1,6 +1,6 @@
 # Minpro
 
-このリポジトリは<https://my-mc.github.io/minpro/>のリポジトリです。このサイトではプログラミングに関する記事をブログのように更新していきます。
+このリポジトリは<https://minpro-rho.vercel.app/>のリポジトリです。このサイトではプログラミングに関する記事をブログのように更新していきます。
 
 ## これより下の内容は開発者のためのものです / The content below this is for developers
 
@@ -39,10 +39,6 @@ Next.jsについてより詳しく知りたい方は、以下の資料をご覧�
 
 Next.jsの[GitHubリポジトリ](https://github.com/vercel/next.js/)はこちら
 
-### GitHubPagesにデプロイする
-
-GitHubにPushすると自動的にビルドされデプロイされます
-
 ## English
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
@@ -77,7 +73,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/)
-
-### Deploy to GitHubPages
-
-When you push it to GitHub, it will be automatically built and deployed.
