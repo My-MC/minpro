@@ -58,3 +58,12 @@
   font-size: 1.25rem;
   line-height: 1.5;
 }
+
+.linethrough {
+  text-decoration: line-through;
+}
+
+.update {
+  font-weight: bold;
+  color: #ff0000;
+}

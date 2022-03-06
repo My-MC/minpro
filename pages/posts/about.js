@@ -38,14 +38,15 @@ export default function About () {
                             <span style={{ fontWeight: "bold"}}>自由にPullRequest送ってよし</span>
                             ということです
                         </p>
-                        <p>
+                        <p className={styles.linethrough}>
                             しかし約束してもらいたいことがありまして、このサイトは
                             <a href="https://github.com/My-MC/minpro/blob/master/package.json" target="_blank" rel="noopener noreferrer">
                                 こちら</a>
                             を見てもらうとNext.jsで構築しています。ですがこのサイトはGithubPagesで公開しています。ですのでNext.jsの画像機能が使えません。
                         </p>
-                        <p>ですのでその問題を解決するまでは画像を使用しないようにお願いします。</p>
-
+                        <p className={styles.linethrough}>ですのでその問題を解決するまでは画像を使用しないようにお願いします。</p>
+                        <p className={styles.update}>3/5更新</p>
+                        <p>Vercelに移行しましたので画像が使用できるようになりました。</p>
                         <h2>最後に</h2>
                         <p>ゆっくりマイペースに更新していくと思いますのでよろしくお願いします。</p>
                     </article>
