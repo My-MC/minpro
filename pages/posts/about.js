@@ -22,7 +22,7 @@ export default function About () {
                         <p>こんにちはMyです。</p>
                         <p>このサイトは僕がJavaScriptを勉強しながら僕がのんびりと更新していく予定です。</p>
 
-                        <h2>このサイトのライセンス</h2>
+                        <h2 className={styles.heading}>このサイトのライセンス</h2>
                         <p>
                             このサイトのライセンス及び
                             <a href="https://github.com/My-MC/minpro" target="_blank" rel="noopener noreferrer">
