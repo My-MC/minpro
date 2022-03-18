@@ -1,7 +1,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
@@ -10,14 +10,17 @@
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 3rem 0;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+.heading {
+  font-size: 2rem;
 }
 
 .article {
   line-height: 1.5;
-  font-size: 1.5rem;
   text-align: start;
   overflow-wrap: normal;
   width: 80%;
@@ -66,4 +69,24 @@
 .update {
   font-weight: bold;
   color: #ff0000;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  .title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 1rem;
+  }
+
+  .title,
+  .description {
+    text-align: center;
+  }
+
+  .description {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
 }

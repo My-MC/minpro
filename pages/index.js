@@ -6,11 +6,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>minpro</title>
+        <title>Minpro</title>
       </Head>
 
       <mian className={styles.mian}>
-      <header>
         <div>
           <h1 className={styles.title}>
             Minpro
@@ -19,7 +18,6 @@ export default function Home() {
             みんなのためのプログラミング
           </h2>
         </div>
-      </header>
         <div className={styles.container}>
           <div className={styles.grid}>
             <Link href="posts/about" passHref>
