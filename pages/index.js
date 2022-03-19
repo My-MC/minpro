@@ -20,6 +20,14 @@ export default function Home() {
         </div>
         <div className={styles.container}>
           <div className={styles.grid}>
+          <Link href="posts/img" passHref>
+              <div className={styles.card}>
+                <a>
+                  <p>第二回</p>
+                  <p>WebPを使ってサイトを最適化しよう</p>
+                </a>
+              </div>
+            </Link>
             <Link href="posts/about" passHref>
               <div className={styles.card}>
                 <a>
