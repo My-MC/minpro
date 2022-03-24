@@ -20,22 +20,38 @@ export default function Home() {
         </div>
         <div className={styles.container}>
           <div className={styles.grid}>
-          <Link href="posts/img" passHref>
-              <div className={styles.card}>
+          <div className={styles.card}>
+              <Link href="posts/img" passHref>
+                <a>
+                  <p>第三回</p>
+                  <p>WebPを使ってサイトを最適化しよう</p>
+                </a>
+              </Link>
+            </div>
+            <div className={styles.card}>
+              <Link href="posts/img" passHref>
+                <a>
+                  <p>第三回</p>
+                  <p>WebPを使ってサイトを最適化しよう</p>
+                </a>
+              </Link>
+            </div>
+            <div className={styles.card}>
+              <Link href="posts/img" passHref>
                 <a>
                   <p>第二回</p>
                   <p>WebPを使ってサイトを最適化しよう</p>
                 </a>
-              </div>
-            </Link>
-            <Link href="posts/about" passHref>
-              <div className={styles.card}>
+              </Link>
+            </div>
+            <div className={styles.card}>
+              <Link href="posts/about" passHref>
                 <a>
                   <p>第一回</p>
                   <p>このサイトについて</p>
                 </a>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
         </div>
       </mian>
