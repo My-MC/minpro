@@ -77,7 +77,6 @@
   color: #ff0000;
 }
 
-
 @media only screen and (max-device-width: 480px) {
   .title {
     margin: 0;

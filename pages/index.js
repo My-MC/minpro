@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Link from "next/link"
+import Head from "next/head";
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -11,12 +11,8 @@ export default function Home() {
 
       <mian className={styles.mian}>
         <div>
-          <h1 className={styles.title}>
-            Minpro
-          </h1>
-          <h2 className={styles.description}>
-            みんなのためのプログラミング
-          </h2>
+          <h1 className={styles.title}>Minpro</h1>
+          <h2 className={styles.description}>みんなのためのプログラミング</h2>
         </div>
         <div className={styles.container}>
           <div className={styles.grid}>
@@ -40,5 +36,5 @@ export default function Home() {
         </div>
       </mian>
     </div>
-  )
+  );
 }
