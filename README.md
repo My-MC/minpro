@@ -26,18 +26,18 @@ npm run dev
 yarn dev
 ```
 
-すると[http://localhost:3000](http://localhost:3000)を開くとこのWebページを見れます
+すると[http://localhost:3000](http://localhost:3000)を開くとこの Web ページを見れます
 
 ページの編集は `pages/index.js` を変更することで開始できます。ファイルを編集すると、ページが自動で更新されます
 
 ### 勉強する
 
-Next.jsについてより詳しく知りたい方は、以下の資料をご覧ください
+Next.js についてより詳しく知りたい方は、以下の資料をご覧ください
 
-- [Next.js Documentation](https://nextjs.org/docs) - Next.jsの機能とAPIについて学びます
-- [Learn Next.js](https://nextjs.org/learn) - Next.jsのインタラクティブなチュートリアルです
+- [Next.js Documentation](https://nextjs.org/docs) - Next.js の機能と API について学びます
+- [Learn Next.js](https://nextjs.org/learn) - Next.js のインタラクティブなチュートリアルです
 
-Next.jsの[GitHubリポジトリ](https://github.com/vercel/next.js/)はこちら
+Next.js の[GitHub リポジトリ](https://github.com/vercel/next.js/)はこちら
 
 ## English
 
