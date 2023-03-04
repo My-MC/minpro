@@ -18,18 +18,14 @@ export default function Home() {
           <div className={styles.grid}>
             <div className={styles.card}>
               <Link href="posts/img" passHref>
-                <a>
                   <p>第二回</p>
                   <p>WebPを使ってサイトを最適化しよう</p>
-                </a>
               </Link>
             </div>
             <div className={styles.card}>
               <Link href="posts/about" passHref>
-                <a>
                   <p>第一回</p>
                   <p>このサイトについて</p>
-                </a>
               </Link>
             </div>
           </div>

@@ -8,19 +8,19 @@ function MyApp({ Component, pageProps }) {
         <header>
           <div>
             <Link href="/">
-              <a>Minpro</a>
+              Minpro
             </Link>
           </div>
           <nav>
             <ul>
               <li>
                 <Link href="/">
-                  <a>Home</a>
+                  Home
                 </Link>
               </li>
               <li>
                 <Link href="/posts/about">
-                  <a>About</a>
+                  About
                 </Link>
               </li>
             </ul>
