@@ -5,21 +5,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix && prettier --write .",
-    "export": "next build && next export",
-    "clean": "rimraf .next out",
-    "serve": "yarn export && serve ./out"
+    "lint": "next lint --fix",
+    "fmt": "prettier --write .",
+    "clean": "rimraf .next out"
   },
   "dependencies": {
-    "next": "12.0.10",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "13.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint": "8.8.0",
-    "eslint-config-next": "12.0.10",
-    "eslint-config-prettier": "8.5.0",
-    "prettier": "2.6.2",
-    "serve": "13.0.2"
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "eslint-config-prettier": "8.6.0",
+    "prettier": "2.8.4"
   }
 }
