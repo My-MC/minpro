@@ -9,7 +9,7 @@ export default function Home() {
         <title>Minpro</title>
       </Head>
 
-      <mian className={styles.mian}>
+      <div className={styles.mian}>
         <div>
           <h1 className={styles.title}>Minpro</h1>
           <h2 className={styles.description}>みんなのためのプログラミング</h2>
@@ -18,19 +18,19 @@ export default function Home() {
           <div className={styles.grid}>
             <div className={styles.card}>
               <Link href="posts/img" passHref>
-                  <p>第二回</p>
-                  <p>WebPを使ってサイトを最適化しよう</p>
+                <p>第二回</p>
+                <p>WebPを使ってサイトを最適化しよう</p>
               </Link>
             </div>
             <div className={styles.card}>
               <Link href="posts/about" passHref>
-                  <p>第一回</p>
-                  <p>このサイトについて</p>
+                <p>第一回</p>
+                <p>このサイトについて</p>
               </Link>
             </div>
           </div>
         </div>
-      </mian>
+      </div>
     </div>
   );
 }
