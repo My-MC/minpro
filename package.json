@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
+    "typecheck": "tsc --noEmit",
     "fmt": "prettier --write .",
     "clean": "rimraf .next out"
   },
@@ -15,9 +16,16 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/node": "16.18.14",
+    "@types/react": "18.0.28",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "eslint-config-prettier": "8.6.0",
-    "prettier": "2.8.4"
+    "prettier": "2.8.4",
+    "typescript": "4.9.5"
+  },
+  "volta": {
+    "node": "16.19.1",
+    "yarn": "1.22.19"
   }
 }

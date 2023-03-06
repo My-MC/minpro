@@ -153,9 +153,9 @@ export default function About() {
         <div className={styles.container}>
           <div className={styles.grid}>
             <Link href="/" passHref>
-                <div className={styles.card}>
-                  <p>HOME</p>
-                </div>
+              <div className={styles.card}>
+                <p>HOME</p>
+              </div>
             </Link>
           </div>
         </div>
