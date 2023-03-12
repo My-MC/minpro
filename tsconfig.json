@@ -4,6 +4,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "strictFunctionTypes": false, // rehype-reactのcomponentsがtypeエラーになるため
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,

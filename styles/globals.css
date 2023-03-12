@@ -55,6 +55,15 @@ footer a {
   flex-grow: 1;
 }
 
+code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 14.4px;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
 @media only screen and (max-device-width: 480px) {
   header {
     padding: 15px 4% 10px;
