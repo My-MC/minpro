@@ -7,6 +7,7 @@ import rehypeReact from "rehype-react";
 import { unified } from "unified";
 
 import matter from "gray-matter";
+import { cdate } from "cdate";
 
 import { getArticleData, getArticlePaths } from "../../libs/postsData";
 import { markdownToHtml } from "../../libs/transpiler";
@@ -19,6 +20,8 @@ import CustomImage from "../../components/Image";
 type ArticleData = {
   title: any;
   content: string;
+  upload_date: string;
+  update_date: string | null
 };
 
 type Props = {
@@ -42,8 +45,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const content = contentHTML.toString();
   const title = articleMetas.front_matter_title;
+  const upload_date = articleMetas.upload_date;
 
-  const post = { content: content, title: title };
+  const post = { content: content, title: title, upload_date };
 
   return { props: { post }, notFound: !post };
 };
@@ -62,6 +66,10 @@ const Article: NextPage<Props> = (props) => {
 
   const title = `${props.post.title} | Minpro`;
 
+  const upload_date = cdate(data.upload_date)
+    .locale("ja")
+    .format("YYYY年 MMMM DD日 dddd");
+
   return (
     <>
       <Head>
@@ -70,6 +78,9 @@ const Article: NextPage<Props> = (props) => {
       <main>
         <div className={styles.container}>
           <article className={styles.article}>
+            <div>
+              <p>Upload date: {upload_date}</p>
+            </div>
             {processor.processSync(data.content).result}
           </article>
         </div>
