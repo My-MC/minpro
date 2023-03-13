@@ -21,7 +21,7 @@ type ArticleData = {
   title: any;
   content: string;
   upload_date: string;
-  update_date: string | null
+  update_date: string | null;
 };
 
 type Props = {
@@ -46,8 +46,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const content = contentHTML.toString();
   const title = articleMetas.front_matter_title;
   const upload_date = articleMetas.upload_date;
+  const update_date =
+    articleMetas.update_date != null ? articleMetas.update_date : null;
 
-  const post = { content: content, title: title, upload_date };
+  const post = {
+    content: content,
+    title: title,
+    upload_date: upload_date,
+    update_date: update_date,
+  };
 
   return { props: { post }, notFound: !post };
 };
@@ -70,6 +77,14 @@ const Article: NextPage<Props> = (props) => {
     .locale("ja")
     .format("YYYY年 MMMM DD日 dddd");
 
+  const update_date =
+    data.update_date != null ? (
+      <p>
+        Update date:{" "}
+        {cdate(data.update_date).locale("ja").format("YYYY年 MMMM DD日 dddd")}
+      </p>
+    ) : null;
+
   return (
     <>
       <Head>
@@ -80,6 +95,7 @@ const Article: NextPage<Props> = (props) => {
           <article className={styles.article}>
             <div>
               <p>Upload date: {upload_date}</p>
+              {update_date}
             </div>
             {processor.processSync(data.content).result}
           </article>
