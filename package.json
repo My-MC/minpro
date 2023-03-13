@@ -11,7 +11,7 @@
     "clean": "rimraf .next out"
   },
   "dependencies": {
-    "cdate": "^0.0.4",
+    "cdate": "0.0.4",
     "gray-matter": "4.0.3",
     "next": "13.2.3",
     "react": "18.2.0",
