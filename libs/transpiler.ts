@@ -1,5 +1,6 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
+import remarkUnwrapImages from "remark-unwrap-images";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypeHighlight from "rehype-highlight";
@@ -12,6 +13,7 @@ import rehypeHighlight from "rehype-highlight";
 export const markdownToHtml = (markdown: string) =>
   unified()
     .use(remarkParse) // Markdownをmdastに変換
+    .use(remarkUnwrapImages) // imgタグのラッピングを外す
     .use(remarkRehype) // mdastをhastに変換
     .use(rehypeHighlight) // hastにhighlightのデータを追加する
     .use(rehypeStringify) // hastをHTMLに変換

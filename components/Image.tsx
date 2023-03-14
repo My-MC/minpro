@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { FC } from "react";
 
+import styles from "../styles/components/CustomImage.module.css";
+
 type Props = {
   src: string;
 };
@@ -9,7 +11,11 @@ type Props = {
  * `<img>`タグをNext.jsの`<Image>`を使ってサイズを変えて表示する
  */
 const CustomImage: FC<Props> = (props) => {
-  return <Image src={props.src} alt={``} width={600} height={300} />;
+  return (
+    <div>
+      <Image src={props.src} alt={``} className={styles.image} fill />
+    </div>
+  );
 };
 
 export default CustomImage;
