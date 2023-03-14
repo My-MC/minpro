@@ -33,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const id = params?.id;
 
   //FIXME `{id}`としているのは無理やりstringにするためなので解決策を探す
@@ -49,12 +49,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const update_date =
     articleMetas.update_date != null ? articleMetas.update_date : null;
 
-  const post = {
-    content: content,
-    title: title,
-    upload_date: upload_date,
-    update_date: update_date,
-  };
+  const post = { content, title, upload_date, update_date };
 
   return { props: { post }, notFound: !post };
 };
