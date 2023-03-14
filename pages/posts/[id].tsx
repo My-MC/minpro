@@ -45,9 +45,15 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
   const content = contentHTML.toString();
   const title = articleMetas.front_matter_title;
-  const upload_date = articleMetas.upload_date;
+  const upload_date = cdate(articleMetas.upload_date)
+    .locale("ja")
+    .format("YYYY年 MMMM DD日 dddd");
   const update_date =
-    articleMetas.update_date != null ? articleMetas.update_date : null;
+    articleMetas.update_date != null
+      ? cdate(articleMetas.update_date)
+          .locale("ja")
+          .format("YYYY年 MMMM DD日 dddd")
+      : null;
 
   const post = { content, title, upload_date, update_date };
 
@@ -68,17 +74,10 @@ const Article: NextPage<Props> = (props) => {
 
   const title = `${props.post.title} | Minpro`;
 
-  const upload_date = cdate(data.upload_date)
-    .locale("ja")
-    .format("YYYY年 MMMM DD日 dddd");
+  const upload_date = <p>Upload date: {data.upload_date}</p>;
 
   const update_date =
-    data.update_date != null ? (
-      <p>
-        Update date:{" "}
-        {cdate(data.update_date).locale("ja").format("YYYY年 MMMM DD日 dddd")}
-      </p>
-    ) : null;
+    data.update_date != null ? <p>Update date: {data.update_date}</p> : null;
 
   return (
     <>
@@ -89,7 +88,7 @@ const Article: NextPage<Props> = (props) => {
         <div className={styles.container}>
           <article className={styles.article}>
             <div>
-              <p>Upload date: {upload_date}</p>
+              {upload_date}
               {update_date}
             </div>
             {processor.processSync(data.content).result}

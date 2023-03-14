@@ -48,3 +48,9 @@
   font-size: 1.25rem;
   line-height: 1.5;
 }
+
+@media only screen and (max-device-width: 480px) {
+  .article {
+    width: 90%;
+  }
+}
