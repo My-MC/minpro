@@ -1,5 +1,5 @@
 ---
-front_matter_title: About
+front_matter_title: このサイトについて
 upload_date: 2022-2-20
 update_date: 2023-3-13
 ---

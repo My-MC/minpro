@@ -1,4 +1,6 @@
 import { Noto_Sans_JP } from "next/font/google";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const noto = Noto_Sans_JP({
   weight: "400",
@@ -7,5 +9,11 @@ const noto = Noto_Sans_JP({
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <main className={noto.className}>{children}</main>;
+  return (
+    <>
+      <Header />
+      <main className={noto.className}>{children}</main>
+      <Footer />
+    </>
+  );
 }
