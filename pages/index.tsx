@@ -55,9 +55,9 @@ const Home: NextPage<Props> = (props) => {
     const data = `Upload: ${posts.upload_date}`;
 
     return (
-      <Grid key={posts.content_id} sm={3}>
+      <Grid key={posts.content_id} className={styles.CardList}>
         <Link href={`/posts/${posts.content_id}`}>
-          <Card style={{ height: "170px" }}>
+          <Card>
             <Card.Body>
               <Text h3>{posts.title}</Text>
             </Card.Body>

@@ -4,3 +4,7 @@
   justify-content: center;
   margin: 1rem;
 }
+
+.CardList {
+  width: 80%;
+}
