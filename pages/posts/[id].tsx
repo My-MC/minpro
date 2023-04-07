@@ -13,7 +13,7 @@ import { getArticleData, getArticlePaths } from "../../libs/postsData";
 import { markdownToHtml } from "../../libs/transpiler";
 
 import "highlight.js/styles/github-dark.css";
-import styles from "../../styles/posts.module.css";
+import styles from "../../styles/posts.module.scss";
 
 import CustomImage from "../../components/Image";
 

@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 import { cdate } from "cdate";
 import matter from "gray-matter";
 
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 
 import { getArticleData, getArticlePaths } from "../libs/postsData";
 

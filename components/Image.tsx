@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import styles from "../styles/components/CustomImage.module.css";
+import styles from "../styles/components/CustomImage.module.scss";
 
 type Props = {
   src: string;

@@ -3,14 +3,14 @@
   text-align: start;
   overflow-wrap: normal;
   width: 80%;
-}
 
-.article p {
-  margin: 16px 0 !important;
+  p {
+    margin: 16px 0 !important;
+  }
 }
 
 .container {
-  item-align: center;
+  align-items: center;
   justify-content: center;
   display: flex;
 }
