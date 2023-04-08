@@ -15,7 +15,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Header />
       </div>
       <main className={noto.className}>{children}</main>
-      <Footer />
+      <div className={noto.className}>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -5,9 +5,9 @@ import { BsGithub } from "react-icons/bs";
 
 import styles from "../styles/components/Header.module.scss";
 
-const Header: FC = (className: string) => {
+const Header: FC = () => {
   return (
-    <nav className={className}>
+    <nav>
       <div className={styles.header}>
         <span>
           <h2 className={styles.brand}>Minpro</h2>
