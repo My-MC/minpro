@@ -1,36 +1,36 @@
 import { FC } from "react";
 import Link from "next/link";
-import { Navbar, Text } from "@nextui-org/react";
 
 import { BsGithub } from "react-icons/bs";
-const Header: FC = () => {
+
+import styles from "../styles/components/Header.module.scss";
+
+const Header: FC = (className: string) => {
   return (
-    <Navbar isBordered variant="static">
-      <Navbar.Brand>
-        <Text h2 color="inherit">
-          Minpro
-        </Text>
-      </Navbar.Brand>
-
-      <Navbar.Content>
-        <Navbar.Link href="/" as={Link}>
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="/posts/about" as={Link}>
-          About
-        </Navbar.Link>
-      </Navbar.Content>
-
-      <Navbar.Content>
-        <Navbar.Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/My-MC/minpro"
-        >
-          <BsGithub />
-        </Navbar.Link>
-      </Navbar.Content>
-    </Navbar>
+    <nav className={className}>
+      <div className={styles.header}>
+        <span>
+          <h2 className={styles.brand}>Minpro</h2>
+        </span>
+        <ul className={styles.content}>
+          <li className={styles.articles}>
+            <Link href="/">Home</Link>
+          </li>
+          <li className={styles.articles}>
+            <Link href="/posts/about">About</Link>
+          </li>
+        </ul>
+        <ul className={styles.content}>
+          <a
+            href="https://github.com/My-MC/minpro"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsGithub />
+          </a>
+        </ul>
+      </div>
+    </nav>
   );
 };
 

@@ -1,19 +1,19 @@
 import { FC } from "react";
-import { Link } from "@nextui-org/react";
+
+import styles from "../styles/components/Footer.module.scss";
 
 const Footer: FC = () => {
   return (
     <>
-      <div style={{ textAlign: "center" }}>
+      <div className={styles.footer}>
         <footer>
-          <Link
+          <a
             href="https://github.com/My-MC"
             target="_blank"
             rel="noopener noreferrer"
-            color="text"
           >
             Created by My-MC(My)
-          </Link>
+          </a>
         </footer>
       </div>
     </>

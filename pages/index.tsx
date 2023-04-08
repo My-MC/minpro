@@ -3,12 +3,6 @@ import Link from "next/link";
 import { GetStaticProps } from "next";
 import { NextPage } from "next";
 
-import { Card, Grid, Text } from "@nextui-org/react";
-import type { CardVariants } from "@nextui-org/react";
-
-import { isSafari } from "react-device-detect";
-import { useState, useEffect } from "react";
-
 import { cdate } from "cdate";
 import matter from "gray-matter";
 
@@ -55,31 +49,20 @@ export const getStaticProps: GetStaticProps<Props> = () => {
 };
 
 const Home: NextPage<Props> = (props) => {
-  const [variant, setVariant] = useState<CardVariants>();
-
-  useEffect(() => {
-    if (isSafari) {
-      setVariant("bordered");
-    } else {
-      setVariant("shadow");
-    }
-  }, []);
-
   const listItems = props.article_object.map((posts) => {
     const data = `Upload: ${posts.upload_date}`;
 
     return (
-      <Grid key={posts.content_id} className={styles.CardList}>
+      <div key={posts.content_id} className={styles.card}>
         <Link href={`/posts/${posts.content_id}`}>
-          <Card variant={variant}>
-            <Card.Body>
-              <Text h3>{posts.title}</Text>
-            </Card.Body>
-            <Card.Divider />
-            <Card.Footer>{data}</Card.Footer>
-          </Card>
+          <div className={styles.body}>
+            <h3>{posts.title}</h3>
+          </div>
+          <div className={styles.footer}>
+            <p>{data}</p>
+          </div>
         </Link>
-      </Grid>
+      </div>
     );
   });
 
@@ -90,9 +73,7 @@ const Home: NextPage<Props> = (props) => {
       </Head>
 
       <div className={styles.main}>
-        <Grid.Container gap={2} justify="center">
-          {listItems}
-        </Grid.Container>
+        <div className={styles.grid}>{listItems}</div>
       </div>
     </>
   );
