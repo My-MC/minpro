@@ -1,18 +1,26 @@
-.article {
-  line-height: 1.5;
-  text-align: start;
-  overflow-wrap: normal;
-  width: 80%;
-
-  p {
-    margin: 16px 0 !important;
-  }
-}
-
 .container {
   align-items: center;
   justify-content: center;
   display: flex;
+
+  .article {
+    line-height: 1.5;
+    text-align: start;
+    overflow-wrap: normal;
+    width: 80%;
+
+    p {
+      margin: 1rem 0 !important;
+    }
+
+    blockquote {
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 14px;
+      color: #7E868C;
+      background-color: #F1F3F5;
+    }
+  }
 }
 
 @media only screen and (max-device-width: 480px) {
