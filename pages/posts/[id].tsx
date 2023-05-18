@@ -20,8 +20,8 @@ import CustomImage from "../../components/Image";
 type ArticleData = {
   title: any;
   content: string;
-  upload_date: string;
-  update_date: string | null;
+  uploadDate: string;
+  updateDate: string | null;
 };
 
 type Props = {
@@ -45,17 +45,17 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
   const content = contentHTML.toString();
   const title = articleMetas.front_matter_title;
-  const upload_date = cdate(articleMetas.upload_date)
+  const uploadDate = cdate(articleMetas.upload_date)
     .locale("ja")
     .format("YYYY年 MMMM DD日 dddd");
-  const update_date =
+  const updateDate =
     articleMetas.update_date != null
       ? cdate(articleMetas.update_date)
           .locale("ja")
           .format("YYYY年 MMMM DD日 dddd")
       : null;
 
-  const post = { content, title, upload_date, update_date };
+  const post = { content, title, uploadDate, updateDate };
 
   return { props: { post }, notFound: !post };
 };
@@ -74,10 +74,10 @@ const Article: NextPage<Props> = (props) => {
 
   const title = `${props.post.title} | Minpro`;
 
-  const upload_date = <p>Upload date: {data.upload_date}</p>;
+  const uploadDate = <p>Upload date: {data.uploadDate}</p>;
 
-  const update_date =
-    data.update_date != null ? <p>Update date: {data.update_date}</p> : null;
+  const updateDate =
+    data.updateDate != null ? <p>Update date: {data.updateDate}</p> : null;
 
   return (
     <>
@@ -88,8 +88,8 @@ const Article: NextPage<Props> = (props) => {
         <div className={styles.container}>
           <article className={styles.article}>
             <div>
-              {upload_date}
-              {update_date}
+              {uploadDate}
+              {updateDate}
             </div>
             {processor.processSync(data.content).result}
           </article>

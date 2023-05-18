@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { GetStaticProps } from "next";
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 
 import { cdate } from "cdate";
 import matter from "gray-matter";
@@ -11,10 +10,10 @@ import styles from "../styles/Home.module.scss";
 import { getArticleData, getArticlePaths } from "../libs/postsData";
 
 type Props = {
-  article_object: {
+  articleObject: {
     title: string;
-    content_id: string;
-    upload_date: string;
+    contentId: string;
+    uploadDate: string;
   }[];
 };
 
@@ -28,33 +27,33 @@ export const getStaticProps: GetStaticProps<Props> = () => {
     const uploadDate = cdate(
       matter(getArticleData(contentId)).data.upload_date
     );
-    return { title, content_id: contentId, upload_date: uploadDate };
+    return { title, contentId, uploadDate };
   });
 
   const sortedArticleObject = articleObject
     .sort((a, b) => {
-      return a.upload_date < b.upload_date ? 1 : -1;
+      return a.uploadDate < b.uploadDate ? 1 : -1;
     })
     .map((data) => {
       return {
         title: data.title,
-        content_id: data.content_id,
-        upload_date: data.upload_date
+        contentId: data.contentId,
+        uploadDate: data.uploadDate
           .locale("ja")
           .format("YYYY年 MMMM DD日 dddd"),
       };
     });
 
-  return { props: { article_object: sortedArticleObject } };
+  return { props: { articleObject: sortedArticleObject } };
 };
 
 const Home: NextPage<Props> = (props) => {
-  const listItems = props.article_object.map((posts) => {
-    const data = `Upload: ${posts.upload_date}`;
+  const listItems = props.articleObject.map((posts) => {
+    const data = `Upload: ${posts.uploadDate}`;
 
     return (
-      <div key={posts.content_id} className={styles.card}>
-        <Link href={`/posts/${posts.content_id}`}>
+      <div key={posts.contentId} className={styles.card}>
+        <Link href={`/posts/${posts.contentId}`}>
           <div className={styles.body}>
             <h3>{posts.title}</h3>
           </div>
