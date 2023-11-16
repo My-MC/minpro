@@ -9,6 +9,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      nextjs-dependencies:
+        patterns:
+          - "*next*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
