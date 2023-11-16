@@ -5,5 +5,5 @@
     "prettier",
     "eslint:recommended"
   ],
-  "rules": { "filenames/match-regex": "off" }
+  "rules": { "filenames/match-regex": "off", "prettier/prettier": "off" }
 }
