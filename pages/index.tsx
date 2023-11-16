@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<Props> = () => {
     const title: string = matter(getArticleData(contentId)).data
       .front_matter_title;
     const uploadDate = cdate(
-      matter(getArticleData(contentId)).data.upload_date
+      matter(getArticleData(contentId)).data.upload_date,
     );
     return { title, contentId, uploadDate };
   });
